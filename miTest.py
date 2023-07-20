@@ -15,11 +15,21 @@ url = r'https://mi-test.obec.go.th/student/login.php'
 
 driver.get(url)
 
+
+# login to mi-test
 user_elem = driver.find_element(By.NAME, 'user_em')
 
 password_elem = driver.find_element(By.NAME, 'password_em')
 
-user_elem.send_keys("test typing")
+user_elem.send_keys("1139600699752")
+
+password_elem.send_keys("1234")
+
+
+submit = driver.find_element(By.XPATH, "//button[@type='submit']")
+submit.click()
+
+print("click submit: ", submit)
 
 
 
