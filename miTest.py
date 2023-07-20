@@ -29,10 +29,11 @@ password_elem.send_keys("1234")
 submit = driver.find_element(By.XPATH, "//button[@type='submit']")
 submit.click()
 
-print("click submit: ", submit)
 
+driver.get('https://mi-test.obec.go.th/student/index.php?module=form_std&id=0')
 
-
+driver.find_element(By.ID, "r[1]").click()
+driver.find_element(By.ID, "r[3]").click()
 
 
 
