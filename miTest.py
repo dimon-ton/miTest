@@ -32,10 +32,18 @@ submit.click()
 
 driver.get('https://mi-test.obec.go.th/student/index.php?module=form_std&id=0')
 
-driver.find_element(By.ID, "r[1]").click()
-driver.find_element(By.ID, "r[3]").click()
+myRadios = driver.find_elements(By.XPATH, '//input[@type="radio"]')
 
+print(myRadios)
 
+# count the number of radio elements in test.
+print("The amount of radio ", len(myRadios)/2)
+
+# driver.find_element(By.ID, "r[1]").click()
+# driver.find_element(By.ID, "r[3]").click()
+
+# click submit button to send data
+submit1 = driver.find_element(By.XPATH, '\\center[@type="submit"]')
 
 
 time.sleep(5)
